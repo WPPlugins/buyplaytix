@@ -1,0 +1,25 @@
+<nst:root xmlns:nst="http://nest.sourceforge.net/" xmlns:c="urn:nsttl:HTML_Template_Nest_Taglib_Standard">
+  <script type="text/javascript">
+    var basepath = '${producer->secure_path}/';  
+  </script>
+  <div class="donation">
+		<form id="_bpt_payment_form" method="post" target="_top">
+		
+		
+		</form>
+	
+		<form method="post" id="_bpt_payment_form_donate"
+			onsubmit="try {return submitDonation('_bpt_payment_form_donate');} catch(e) { alert(e); } return false;">
+			<input type="hidden" name="action" /> <input type="hidden"
+				name="__type" value="Donation" /> <input type="hidden"
+				name="PHPSESSID" value="${fn:session_id()}" />
+			<c:if test="_REQUEST['forceTest']">
+				<input type="hidden" name="forceTest" value="1" />
+			</c:if>
+			$ <input type="text" name="donation_amount" id="donation_amount" />
+			<button type="submit" value="Donate" id="donate_button">
+				<span>Donate</span>
+			</button>
+		</form>
+	</div>
+</nst:root>

@@ -1,0 +1,22 @@
+{
+    "name": "buyplaytix/buyplaytix-wordpress",
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
+    "require": {
+         "pear-pear/HTTP_OAuth": "*",
+         "oyatel/minify": "dev-master",
+         "natxet/cssmin": "dev-master",
+         "buyplaytix/HTML_Template_Nest": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+          "BuyPlayTix": "include",
+          "Taglib": "include"
+        }
+    }
+}
+
